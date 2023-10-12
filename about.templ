@@ -1,0 +1,81 @@
+package main
+
+import "time"
+import "strconv"
+
+var currentYear = time.Now().Year()
+var yearsOfExperience = currentYear - 2014
+var yearsOfExperienceStr = strconv.Itoa(yearsOfExperience)
+
+templ aboutPage() {
+    <div>
+        <div class="w-full text-lg">
+            <div class="m-auto sm:w-4/5 max-w-5xl">
+                <div class="w-full text-center">
+                    🚨This page is a work in progress...🚨
+                </div>
+               @aboutSection("Introduction") {
+                        <div class="w-full text-center">
+                            <p class="italic">
+                                (As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)
+                            </p>
+                        </div>
+                        <p>
+                            I have been developing in a professional capacity as a full stack developer for over {yearsOfExperienceStr} years.
+                        </p>
+                        <p>
+                            I have extensive experience in implementing complex software solutions, based on varying degrees of specification.
+                        </p>
+                        <p>
+                            Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.
+                        </p>
+                        <p>
+                            I have a passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team
+                        </p>
+                        <p>
+                            I am excited about continuing to exploring the benefit and opportunities of serveless/cloud solutions.
+                        </p>
+                        <div class="text-center w-full">
+                            <a class="underline text-2xl" href={`mailto:${settings.contactEmail}`}>
+                                Get in touch
+                            </a>
+                        </div>
+                }
+                <img src="/img/atopthehill.jpg" alt="Myself on the top of a hill after climbing 1.4 vertical km to retrieve a fallen drone..." width="5184" height="3880" />
+                @aboutSection("Tech") {
+                        <div class="grid grid-cols-3 space-y-2 sm:grid-cols-3 sm:space-x-4">
+                            <div>
+                                <div class="text-xl text-center">Loving</div>
+                                <div>`go`, htmx, Node-Red, Tailwind</div>
+                            </div>
+                            <div>
+                                <div class="text-xl text-center">Learning</div>
+                                <div>MQTT, Django, postgresML, Unraid, htmx, tailwind</div>
+                            </div>
+                            <div>
+                                <div class="text-xl text-center">Up Next</div>
+                                <div>Alpine.js, Nix/NixOS</div>
+                            </div>
+                            <div class="col-span-full">
+                                <div class="text-xl text-center">Experience In</div>
+                                <div>
+                                    C#, .Net Core + DI, React, Next.js + Vercel, SQL, Entity Framework, SQL Server, T-SQL, ASP.NET MVC, Web APIs, IIS, AWS CDK, RESTful API design, git, CI/CD, AWS Lambda, n8n, Storybook,DynamoDB, Heroku, AutoFac, Moq, MQTT, Swagger
+                                </div>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+templ aboutSection(title string) {
+    <div>
+        <h2>{title}</h2>
+        { children... }
+    </div>
+}
+
+type settingsType struct {
+    contactEmail string
+}
