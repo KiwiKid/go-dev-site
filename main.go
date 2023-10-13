@@ -12,7 +12,7 @@ func main() {
 
 
 
-    component := hello("John")
+    component := home()
     
     http.Handle("/", templ.Handler(component))
 
