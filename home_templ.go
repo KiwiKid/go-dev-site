@@ -26,11 +26,11 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		err = headerComponent("My Blog").Render(ctx, templBuffer)
+		err = headerComponent("Greg C. 👨‍💻 ✈️ ⚽").Render(ctx, templBuffer)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<div class=\"flex items-center justify-center h-screen text-center font-medium font-mono\"><div class=\"font-bold rounded-lg border shadow-lg p-10 space-y-3\"><h1 class=\"text-4xl font-medium p-5\">")
+		_, err = templBuffer.WriteString("<body><div class=\"flex justify-center\"><div class=\"bg-blue-500 text-white p-4\"><h1 class=\"text-4xl font-medium p-5\">")
 		if err != nil {
 			return err
 		}
@@ -39,7 +39,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h1><h2 class=\"text-2xl font-medium\">")
+		_, err = templBuffer.WriteString("</h1></div><h2 class=\"text-2xl font-medium\">")
 		if err != nil {
 			return err
 		}
@@ -120,7 +120,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</a></div></div></div></html>")
+		_, err = templBuffer.WriteString("</a></div></div></body></html>")
 		if err != nil {
 			return err
 		}

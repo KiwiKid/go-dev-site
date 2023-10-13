@@ -8,6 +8,19 @@ import (
 	"github.com/a-h/templ"
 )
 
+func setMIMEType(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "" {
+			switch {
+			case r.URL.Path[len(r.URL.Path)-4:] == ".css":
+				w.Header().Set("Content-Type", "text/css")
+			// You can add other file type detections here if needed
+			}
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
 func main() {
 
 
@@ -20,7 +33,14 @@ func main() {
 
 	http.Handle("/about", templ.Handler(aboutPage))
 
-	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+	debug := debug()
+
+	http.Handle("/debug", templ.Handler(debug))
+
+    assetsHandler := http.StripPrefix("/assets/", http.FileServer(http.Dir("assets")))
+    
+    // apply the middleware to the assets handler
+    http.Handle("/assets/", setMIMEType(assetsHandler))
 
 
     fmt.Println("Listening on :3000")

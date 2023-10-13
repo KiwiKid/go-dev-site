@@ -2,7 +2,7 @@
 templ generate
 
 # (css rebuild)
-tailwindcss -i tailwind.css -o assets/output.css
+tailwindcss -i tailwind.css -o assets/css/output.css
 
 go run *.go
 

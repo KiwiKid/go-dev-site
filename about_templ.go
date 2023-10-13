@@ -29,7 +29,15 @@ func aboutPage() templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<div><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><div class=\"w-full text-center\">")
+		_, err = templBuffer.WriteString("<html>")
+		if err != nil {
+			return err
+		}
+		err = headerComponent("About me").Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("<body><div><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><div class=\"w-full text-center\">")
 		if err != nil {
 			return err
 		}
@@ -242,7 +250,7 @@ func aboutPage() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div></div></div>")
+		_, err = templBuffer.WriteString("</div></div></div></body></html>")
 		if err != nil {
 			return err
 		}

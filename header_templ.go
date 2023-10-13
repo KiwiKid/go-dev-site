@@ -40,7 +40,21 @@ func headerComponent(title string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("--><link rel=\"stylesheet\" href=\"assets/output.css\"></head>")
+		_, err = templBuffer.WriteString("--><!--")
+		if err != nil {
+			return err
+		}
+		var_4 := ` <script src="https://cdn.tailwindcss.com"></script>`
+		_, err = templBuffer.WriteString(var_4)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--><link rel=\"stylesheet\" href=\"/assets/output.css\"></head>")
+		if err != nil {
+			return err
+		}
+		var_5 := `HEADER`
+		_, err = templBuffer.WriteString(var_5)
 		if err != nil {
 			return err
 		}

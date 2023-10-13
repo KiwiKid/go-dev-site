@@ -8,6 +8,9 @@ var yearsOfExperience = currentYear - 2014
 var yearsOfExperienceStr = strconv.Itoa(yearsOfExperience)
 
 templ aboutPage() {
+    <html>
+      @headerComponent("About me")
+      <body>
     <div>
         <div class="w-full text-lg">
             <div class="m-auto sm:w-4/5 max-w-5xl">
@@ -67,6 +70,8 @@ templ aboutPage() {
             </div>
         </div>
     </div>
+    </body>
+    </html>
 }
 
 templ aboutSection(title string) {
