@@ -49,12 +49,79 @@ func headerComponent(title string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</script><link rel=\"stylesheet\" href=\"/assets/output.css\"></head>")
+		_, err = templBuffer.WriteString("</script><link rel=\"stylesheet\" href=\"/assets/output.css\"></head><nav class=\"bg-white shadow\"><div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"><div class=\"flex justify-between h-16\"><div class=\"flex\"><div class=\"-ml-2 mr-2 flex items-center md:hidden\"><!--")
 		if err != nil {
 			return err
 		}
-		var_5 := `HEADER`
+		var_5 := ` Mobile menu button `
 		_, err = templBuffer.WriteString(var_5)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--><button class=\"inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500\" aria-expanded=\"false\"><!--")
+		if err != nil {
+			return err
+		}
+		var_6 := ` Icon for mobile menu button `
+		_, err = templBuffer.WriteString(var_6)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--><svg class=\"block h-6 w-6\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h16M4 18h16\"></path></svg></button></div><div class=\"flex-shrink-0 flex items-center\"><!--")
+		if err != nil {
+			return err
+		}
+		var_7 := ` Logo area `
+		_, err = templBuffer.WriteString(var_7)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--><img class=\"block lg:hidden h-8 w-auto\" src=\"your-logo.png\" alt=\"Your Logo\"><img class=\"hidden lg:block h-8 w-auto\" src=\"your-logo.png\" alt=\"Your Logo\"></div><div class=\"hidden md:ml-6 md:flex md:space-x-8\"><!--")
+		if err != nil {
+			return err
+		}
+		var_8 := ` Navigation links `
+		_, err = templBuffer.WriteString(var_8)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--><a href=\"#\" class=\"text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 focus:outline-none focus:border-indigo-700 transition\">")
+		if err != nil {
+			return err
+		}
+		var_9 := `Home`
+		_, err = templBuffer.WriteString(var_9)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</a><a href=\"#\" class=\"text-gray-500 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition\">")
+		if err != nil {
+			return err
+		}
+		var_10 := `Team`
+		_, err = templBuffer.WriteString(var_10)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</a><!--")
+		if err != nil {
+			return err
+		}
+		var_11 := ` Add more navigation links here `
+		_, err = templBuffer.WriteString(var_11)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--></div></div><div class=\"hidden md:ml-6 md:flex md:items-center\"><!--")
+		if err != nil {
+			return err
+		}
+		var_12 := ` Optional right-side content `
+		_, err = templBuffer.WriteString(var_12)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("--></div></div></div></nav>")
 		if err != nil {
 			return err
 		}

@@ -30,97 +30,82 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<body><div class=\"flex justify-center\"><div class=\"bg-blue-500 text-white p-4\"><h1 class=\"text-4xl font-medium p-5\">")
+		_, err = templBuffer.WriteString("<body class=\"bg-gray-100\"><div class=\"flex justify-center items-center min-h-screen\"><div class=\"max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden\"><div class=\"md:flex\"><div class=\"p-8\"><a href=\"#\" class=\"block mt-1 text-lg leading-tight font-medium text-black hover:underline\">")
 		if err != nil {
 			return err
 		}
-		var_2 := `Hey, i&apos;m Greg`
+		var_2 := `Greg C.`
 		_, err = templBuffer.WriteString(var_2)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h1></div><h2 class=\"text-2xl font-medium\">")
+		_, err = templBuffer.WriteString("</a><p class=\"mt-2 text-gray-600\">")
 		if err != nil {
 			return err
 		}
-		var_3 := `&#123; a software developer, football player, hobby fpv drone pilot`
+		var_3 := `A software developer, football player, FPV drone pilot, Self-Hosted Software enthusiast - based in Christchurch, New Zealand.`
 		_, err = templBuffer.WriteString(var_3)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString(" ")
+		_, err = templBuffer.WriteString("</p></div></div><div class=\"p-4\"><span class=\"inline-block bg-blue-200 text-blue-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide\">")
 		if err != nil {
 			return err
 		}
-		var_4 := `&#125;`
+		var_4 := `New Opportunity`
 		_, err = templBuffer.WriteString(var_4)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h2><h2>")
+		_, err = templBuffer.WriteString("</span><div class=\"mt-2\">")
 		if err != nil {
 			return err
 		}
-		var_5 := `&#123; based in christchurch, new zealand &#125; `
+		var_5 := `Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/mostly remote roles.`
 		_, err = templBuffer.WriteString(var_5)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h2><div class=\"text-lg border border-black p-4 rounded-md\"><div class=\"py-2\">")
+		_, err = templBuffer.WriteString("</div></div><div class=\"px-4 pt-4 pb-2\"><span class=\"inline-block bg-green-200 text-green-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide\">")
 		if err != nil {
 			return err
 		}
-		var_6 := `open to new software development opportunities`
+		var_6 := `Projects`
 		_, err = templBuffer.WriteString(var_6)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div><div>")
+		_, err = templBuffer.WriteString("</span><div class=\"mt-2 grid grid-cols-1 sm:grid-cols-2 gap-4\"><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"/dev/nzcovidmap\"><img src=\"/icons/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_7 := `I thrive in fast paced, high trust environments, with a clear path`
+		var_7 := `NZCovidMap`
 		_, err = templBuffer.WriteString(var_7)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString(" ")
+		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"/about\"><h3 class=\"text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_8 := `to having a big impact and everyone moving in the same direction.`
+		var_8 := `About`
 		_, err = templBuffer.WriteString(var_8)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div><div class=\"py-2\">")
+		_, err = templBuffer.WriteString("</h3></a></div></div></div></div>")
 		if err != nil {
 			return err
 		}
-		var_9 := `only considering fully/mostly remote roles`
-		_, err = templBuffer.WriteString(var_9)
+		err = aboutPage().Render(ctx, templBuffer)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div></div><div class=\"grid grid-cols-1 sm:grid-cols-2\"><a class=\"btn btn-primary\" href=\"/dev/nzcovidmap\"><img src=\"/icons/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" width=\"100\" height=\"100\"> ")
+		err = nzCovidMap().Render(ctx, templBuffer)
 		if err != nil {
 			return err
 		}
-		var_10 := `NZCovidMap`
-		_, err = templBuffer.WriteString(var_10)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</a><a href=\"/about\">")
-		if err != nil {
-			return err
-		}
-		var_11 := `About`
-		_, err = templBuffer.WriteString(var_11)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</a></div></div></body></html>")
+		_, err = templBuffer.WriteString("</body></html>")
 		if err != nil {
 			return err
 		}

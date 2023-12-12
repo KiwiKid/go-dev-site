@@ -29,15 +29,7 @@ func aboutPage() templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<html>")
-		if err != nil {
-			return err
-		}
-		err = headerComponent("About me").Render(ctx, templBuffer)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<body><div><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><div class=\"w-full text-center\">")
+		_, err = templBuffer.WriteString("<div><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><div class=\"w-full text-center\">")
 		if err != nil {
 			return err
 		}
@@ -71,6 +63,10 @@ func aboutPage() templ.Component {
 			}
 			var_5 := `I have been developing in a professional capacity as a full stack developer for over `
 			_, err = templBuffer.WriteString(var_5)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString(" ")
 			if err != nil {
 				return err
 			}
@@ -250,7 +246,7 @@ func aboutPage() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div></div></div></body></html>")
+		_, err = templBuffer.WriteString("</div></div></div>")
 		if err != nil {
 			return err
 		}
@@ -292,6 +288,46 @@ func aboutSection(title string) templ.Component {
 			return err
 		}
 		_, err = templBuffer.WriteString("</div>")
+		if err != nil {
+			return err
+		}
+		if !templIsBuffer {
+			_, err = templBuffer.WriteTo(w)
+		}
+		return err
+	})
+}
+
+func aboutWithContainer() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		templBuffer, templIsBuffer := w.(*bytes.Buffer)
+		if !templIsBuffer {
+			templBuffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templBuffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		var_25 := templ.GetChildren(ctx)
+		if var_25 == nil {
+			var_25 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		_, err = templBuffer.WriteString("<html>")
+		if err != nil {
+			return err
+		}
+		err = headerComponent("About me").Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("<body>")
+		if err != nil {
+			return err
+		}
+		err = aboutPage().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</body></html>")
 		if err != nil {
 			return err
 		}

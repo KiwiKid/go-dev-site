@@ -14,7 +14,7 @@ func setMIMEType(next http.Handler) http.Handler {
 			switch {
 			case r.URL.Path[len(r.URL.Path)-4:] == ".css":
 				w.Header().Set("Content-Type", "text/css")
-			// You can add other file type detections here if needed
+				// You can add other file type detections here if needed
 			}
 		}
 		next.ServeHTTP(w, r)
@@ -23,13 +23,11 @@ func setMIMEType(next http.Handler) http.Handler {
 
 func main() {
 
+	component := home()
 
+	http.Handle("/", templ.Handler(component))
 
-    component := home()
-    
-    http.Handle("/", templ.Handler(component))
-
-	aboutPage := aboutPage()
+	aboutPage := aboutWithContainer()
 
 	http.Handle("/about", templ.Handler(aboutPage))
 
@@ -37,14 +35,17 @@ func main() {
 
 	http.Handle("/debug", templ.Handler(debug))
 
-    assetsHandler := http.StripPrefix("/assets/", http.FileServer(http.Dir("assets")))
-    
-    // apply the middleware to the assets handler
-    http.Handle("/assets/", setMIMEType(assetsHandler))
+	nzconfigmap := nzCovidMapWithContainer()
 
+	http.Handle("/dev/nzcovidmap", templ.Handler(nzconfigmap))
 
-    fmt.Println("Listening on :3000")
-    if err := http.ListenAndServe(":3000", nil); err != nil {
-        log.Printf("error listening: %v", err)
-    }
+	assetsHandler := http.StripPrefix("/assets/", http.FileServer(http.Dir("assets")))
+
+	// apply the middleware to the assets handler
+	http.Handle("/assets/", setMIMEType(assetsHandler))
+
+	fmt.Println("Listening on :3000")
+	if err := http.ListenAndServe(":3000", nil); err != nil {
+		log.Printf("error listening: %v", err)
+	}
 }
