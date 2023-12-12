@@ -13,24 +13,26 @@ templ home() {
 						</div>
 					</div>
 					<div class="p-4">
-						<span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">New Opportunity</span>
 						<div class="mt-2">
-							Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/mostly remote roles.
+							{  "{ Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/mostly remote roles.} " }
 						</div>
 					</div>
+					<a class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out" href="#about">
+						<h3 class="text-center text-xl font-medium">About</h3>
+					</a>
 					<div class="px-4 pt-4 pb-2">
-						<span class="inline-block bg-green-200 text-green-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">Projects</span>
-						<div class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-							<a class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out" href="/dev/nzcovidmap">
-								<img
- 									src="/icons/covid19/icon-512x512.png"
- 									alt="Locations of Interest Explorer Icon"
- 									class="h-16 w-16 md:h-24 md:w-24 mx-auto"
-								/>
+						<div class="mt-2 grid grid-cols-3 sm:grid-cols-2 gap-4">
+							<a class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out" href="#nzcovidmap">
+								<img src="/assets/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-16 w-16 md:h-24 md:w-24 mx-auto"/>
 								<h3 class="mt-2 text-center text-xl font-medium">NZCovidMap</h3>
 							</a>
-							<a class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out" href="/about">
-								<h3 class="text-center text-xl font-medium">About</h3>
+							<a class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out" href="#waterreporter">
+								<img src="/assets/covid19/icon-512x512.png" alt="Locations of Interest Explorer Icon" class="h-16 w-16 md:h-24 md:w-24 mx-auto"/>
+								<h3 class="mt-2 text-center text-xl font-medium">Chch Water Reporter</h3>
+							</a>
+							<a class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out" href="#gogethabits">
+								<img src="/assets/covid19/icon-512x512.png" alt="Locations of Interest Explorer Icon" class="h-16 w-16 md:h-24 md:w-24 mx-auto"/>
+								<h3 class="mt-2 text-center text-xl font-medium">go-get-habits</h3>
 							</a>
 						</div>
 					</div>
@@ -38,6 +40,8 @@ templ home() {
 			</div>
 			@aboutPage()
 			@nzCovidMap()
+			@chchWaterReporter()
+			Habits()
 		</body>
 	</html>
 }

@@ -48,47 +48,47 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</p></div></div><div class=\"p-4\"><span class=\"inline-block bg-blue-200 text-blue-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide\">")
+		_, err = templBuffer.WriteString("</p></div></div><div class=\"p-4\"><div class=\"mt-2\">")
 		if err != nil {
 			return err
 		}
-		var_4 := `New Opportunity`
-		_, err = templBuffer.WriteString(var_4)
+		var var_4 string = "{ Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/mostly remote roles.} "
+		_, err = templBuffer.WriteString(templ.EscapeString(var_4))
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</span><div class=\"mt-2\">")
+		_, err = templBuffer.WriteString("</div></div><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"#about\"><h3 class=\"text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_5 := `Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/mostly remote roles.`
+		var_5 := `About`
 		_, err = templBuffer.WriteString(var_5)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div></div><div class=\"px-4 pt-4 pb-2\"><span class=\"inline-block bg-green-200 text-green-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide\">")
+		_, err = templBuffer.WriteString("</h3></a><div class=\"px-4 pt-4 pb-2\"><div class=\"mt-2 grid grid-cols-3 sm:grid-cols-2 gap-4\"><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"#nzcovidmap\"><img src=\"/assets/covid19/icon-512x512.webp\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_6 := `Projects`
+		var_6 := `NZCovidMap`
 		_, err = templBuffer.WriteString(var_6)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</span><div class=\"mt-2 grid grid-cols-1 sm:grid-cols-2 gap-4\"><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"/dev/nzcovidmap\"><img src=\"/icons/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
+		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"#waterreporter\"><img src=\"/assets/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_7 := `NZCovidMap`
+		var_7 := `Chch Water Reporter`
 		_, err = templBuffer.WriteString(var_7)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"/about\"><h3 class=\"text-center text-xl font-medium\">")
+		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"#gogethabits\"><img src=\"/assets/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_8 := `About`
+		var_8 := `go-get-habits`
 		_, err = templBuffer.WriteString(var_8)
 		if err != nil {
 			return err
@@ -102,6 +102,19 @@ func home() templ.Component {
 			return err
 		}
 		err = nzCovidMap().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		err = chchWaterReporter().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString(" ")
+		if err != nil {
+			return err
+		}
+		var_9 := `Habits()`
+		_, err = templBuffer.WriteString(var_9)
 		if err != nil {
 			return err
 		}

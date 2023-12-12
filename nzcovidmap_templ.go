@@ -62,7 +62,7 @@ func nzCovidMap() templ.Component {
 			var_2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<div class=\"container mx-auto p-4\"><!--")
+		_, err = templBuffer.WriteString("<div id=\"nzcovidmap\" class=\"container scroll-m-[1rem] m-auto sm:w-4/5 max-w-10xl\"><!--")
 		if err != nil {
 			return err
 		}
@@ -71,7 +71,7 @@ func nzCovidMap() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("--><div class=\"text-center\"><h1 class=\"text-4xl font-bold mb-2\">")
+		_, err = templBuffer.WriteString("--><div class=\"flex flex-col md:flex-row\"><div class=\"md:w-1/2\"><div class=\"text-center\"><h1 class=\"text-4xl font-bold mb-2\">")
 		if err != nil {
 			return err
 		}
@@ -278,7 +278,7 @@ func nzCovidMap() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</p></div><!--")
+		_, err = templBuffer.WriteString("</p></div></div><div class=\"md:w-1/2\"><!--")
 		if err != nil {
 			return err
 		}
@@ -287,7 +287,7 @@ func nzCovidMap() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("--><div class=\"grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6\"><div class=\"rounded overflow-hidden shadow-lg\"><img class=\"w-full\" src=\"/path/to/your/image1.jpg\" alt=\"Image Description 1\"></div><div class=\"rounded overflow-hidden shadow-lg\"><img class=\"w-full\" src=\"/path/to/your/image2.jpg\" alt=\"Image Description 2\"></div><div class=\"rounded overflow-hidden shadow-lg\"><img class=\"w-full\" src=\"/path/to/your/image3.jpg\" alt=\"Image Description 3\"></div></div></div>")
+		_, err = templBuffer.WriteString("--><div class=\"rounded overflow-hidden shadow-lg\"><img class=\"w-full\" src=\"/assets/covid19/covid_desktop.webp\" alt=\"Image Description 1\"></div><div class=\"rounded overflow-hidden shadow-lg max-w-lg\"><img class=\"w-full\" src=\"/assets/covid19/nzcovid_2.webp\" alt=\"Image Description 2\"></div></div></div></div>")
 		if err != nil {
 			return err
 		}

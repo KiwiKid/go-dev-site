@@ -29,7 +29,7 @@ func aboutPage() templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<div><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><div class=\"w-full text-center\">")
+		_, err = templBuffer.WriteString("<div id=\"about\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><div class=\"w-full text-center\">")
 		if err != nil {
 			return err
 		}
