@@ -49,7 +49,20 @@ func headerComponent(title string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</script><link rel=\"stylesheet\" href=\"/assets/output.css\"></head>")
+		_, err = templBuffer.WriteString("</script><link rel=\"stylesheet\" href=\"/assets/output.css\"><link href=\"http://fonts.googleapis.com/css?family=IBM+Plex+Mono\" rel=\"stylesheet\" type=\"text/css\"><style>")
+		if err != nil {
+			return err
+		}
+		var_5 := `
+			body {
+				font-family: 'Droid Sans', arial, serif;
+			}
+		`
+		_, err = templBuffer.WriteString(var_5)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</style></head>")
 		if err != nil {
 			return err
 		}

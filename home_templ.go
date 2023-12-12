@@ -30,7 +30,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<body class=\"bg-gray-100\"><div class=\"flex justify-center items-center min-h-screen\"><div class=\"max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden\"><div class=\"md:flex\"><div class=\"p-8\"><a href=\"#\" class=\"block mt-1 text-lg leading-tight font-medium text-black hover:underline\">")
+		_, err = templBuffer.WriteString("<body class=\"bg-gray-100\"><div class=\"flex justify-center items-center min-h-screen\"><div class=\"max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden\"><div class=\"md:flex \"><div class=\"p-8\"><a href=\"#\" class=\"block mt-1  leading-tight font-medium text-black hover:underline\">")
 		if err != nil {
 			return err
 		}
@@ -39,12 +39,12 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</a><p class=\"mt-2 text-gray-600\">")
+		_, err = templBuffer.WriteString("</a><p class=\"mt-2 text-gray-600 text-lg\">")
 		if err != nil {
 			return err
 		}
-		var_3 := `A software developer, football player, FPV drone pilot, Self-Hosted Software enthusiast - based in Christchurch, New Zealand.`
-		_, err = templBuffer.WriteString(var_3)
+		var var_3 string = "{ A software developer, fpv drone pilot, self-hosted software enthusiast - based in Christchurch, New Zealand (GMT+13) }"
+		_, err = templBuffer.WriteString(templ.EscapeString(var_3))
 		if err != nil {
 			return err
 		}
@@ -52,7 +52,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		var var_4 string = "{ Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/mostly remote roles.} "
+		var var_4 string = "{ Open to new software development opportunities. I thrive in fast-paced, high trust environments, with a clear path to having a big impact and everyone moving in the same direction. Only considering fully/largely remote roles.} "
 		_, err = templBuffer.WriteString(templ.EscapeString(var_4))
 		if err != nil {
 			return err
