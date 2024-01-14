@@ -193,7 +193,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -202,7 +202,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -238,7 +238,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -247,7 +247,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -283,7 +283,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -292,7 +292,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -328,7 +328,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -337,7 +337,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<br> ")
+		_, err = templBuffer.WriteString("<br>")
 		if err != nil {
 			return err
 		}
@@ -400,7 +400,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString(" <br>")
+		_, err = templBuffer.WriteString(" <br> ")
 		if err != nil {
 			return err
 		}
@@ -620,7 +620,7 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_68 := `Demo API Generator`
+		var_68 := `Chirstchurch Water Reporter`
 		_, err = templBuffer.WriteString(var_68)
 		if err != nil {
 			return err
@@ -629,17 +629,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_69 := `A dummy data free and documented API generator to facilitate `
+		var_69 := `[TODO]`
 		_, err = templBuffer.WriteString(var_69)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_70 := `the process of testing the front-end portion of projects.`
-		_, err = templBuffer.WriteString(var_70)
 		if err != nil {
 			return err
 		}
@@ -647,8 +638,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_71 := `03`
-		_, err = templBuffer.WriteString(var_71)
+		var_70 := `03`
+		_, err = templBuffer.WriteString(var_70)
 		if err != nil {
 			return err
 		}
@@ -656,8 +647,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_72 := `Demo API Generator`
-		_, err = templBuffer.WriteString(var_72)
+		var_71 := `Label-Maker-3000`
+		_, err = templBuffer.WriteString(var_71)
 		if err != nil {
 			return err
 		}
@@ -665,17 +656,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_73 := `A dummy data free and documented API generator to facilitate `
-		_, err = templBuffer.WriteString(var_73)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_74 := `the process of testing the front-end portion of projects.`
-		_, err = templBuffer.WriteString(var_74)
+		var_72 := `[TODO]`
+		_, err = templBuffer.WriteString(var_72)
 		if err != nil {
 			return err
 		}
@@ -683,8 +665,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_75 := `Experience`
-		_, err = templBuffer.WriteString(var_75)
+		var_73 := `Experience`
+		_, err = templBuffer.WriteString(var_73)
 		if err != nil {
 			return err
 		}
@@ -692,8 +674,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_76 := `Below is a summary of the places I studied`
-		_, err = templBuffer.WriteString(var_76)
+		var_74 := `Below is a summary of the places I studied`
+		_, err = templBuffer.WriteString(var_74)
 		if err != nil {
 			return err
 		}
@@ -701,12 +683,30 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_77 := `Company`
-		_, err = templBuffer.WriteString(var_77)
+		var_75 := `Company`
+		_, err = templBuffer.WriteString(var_75)
 		if err != nil {
 			return err
 		}
 		_, err = templBuffer.WriteString("</h6><p class=\"font-semibold text-gray-600 text-base\">")
+		if err != nil {
+			return err
+		}
+		var_76 := `Massa Fames `
+		_, err = templBuffer.WriteString(var_76)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("<span class=\"font-normal text-gray-300\">")
+		if err != nil {
+			return err
+		}
+		var_77 := `/ New York`
+		_, err = templBuffer.WriteString(var_77)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</span></p><p class=\"font-semibold text-gray-600 text-base\">")
 		if err != nil {
 			return err
 		}
@@ -778,34 +778,34 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</span></p><p class=\"font-semibold text-gray-600 text-base\">")
-		if err != nil {
-			return err
-		}
-		var_86 := `Massa Fames `
-		_, err = templBuffer.WriteString(var_86)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-normal text-gray-300\">")
-		if err != nil {
-			return err
-		}
-		var_87 := `/ New York`
-		_, err = templBuffer.WriteString(var_87)
-		if err != nil {
-			return err
-		}
 		_, err = templBuffer.WriteString("</span></p></div><div class=\"space-y-8 md:space-y-16 mb-16 md:mb-0\"><h6 class=\"font-medium text-gray-400 text-base uppercase\">")
 		if err != nil {
 			return err
 		}
-		var_88 := `Position`
-		_, err = templBuffer.WriteString(var_88)
+		var_86 := `Position`
+		_, err = templBuffer.WriteString(var_86)
 		if err != nil {
 			return err
 		}
 		_, err = templBuffer.WriteString("</h6><p class=\"font-normal text-gray-400 text-base\">")
+		if err != nil {
+			return err
+		}
+		var_87 := `Junior Front-End Developer`
+		_, err = templBuffer.WriteString(var_87)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
+		if err != nil {
+			return err
+		}
+		var_88 := `Junior Front-End Developer`
+		_, err = templBuffer.WriteString(var_88)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
 		if err != nil {
 			return err
 		}
@@ -832,34 +832,34 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
-		if err != nil {
-			return err
-		}
-		var_92 := `Junior Front-End Developer`
-		_, err = templBuffer.WriteString(var_92)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
-		if err != nil {
-			return err
-		}
-		var_93 := `Junior Front-End Developer`
-		_, err = templBuffer.WriteString(var_93)
-		if err != nil {
-			return err
-		}
 		_, err = templBuffer.WriteString("</p></div><div class=\"space-y-8 md:space-y-16\"><h6 class=\"font-medium text-gray-400 text-base uppercase\">")
 		if err != nil {
 			return err
 		}
-		var_94 := `Year`
-		_, err = templBuffer.WriteString(var_94)
+		var_92 := `Year`
+		_, err = templBuffer.WriteString(var_92)
 		if err != nil {
 			return err
 		}
 		_, err = templBuffer.WriteString("</h6><p class=\"font-normal text-gray-400 text-base\">")
+		if err != nil {
+			return err
+		}
+		var_93 := `2016`
+		_, err = templBuffer.WriteString(var_93)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
+		if err != nil {
+			return err
+		}
+		var_94 := `2016`
+		_, err = templBuffer.WriteString(var_94)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
 		if err != nil {
 			return err
 		}
@@ -886,336 +886,70 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
-		if err != nil {
-			return err
-		}
-		var_98 := `2016`
-		_, err = templBuffer.WriteString(var_98)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><p class=\"font-normal text-gray-400 text-base\">")
-		if err != nil {
-			return err
-		}
-		var_99 := `2016`
-		_, err = templBuffer.WriteString(var_99)
-		if err != nil {
-			return err
-		}
 		_, err = templBuffer.WriteString("</p></div></div></div></section><section class=\"py-10 md:py-16\"><div class=\"container max-w-screen-xl mx-auto px-4\"><h1 class=\"font-medium text-gray-700 text-3xl md:text-4xl mb-5\">")
 		if err != nil {
 			return err
 		}
-		var_100 := `Brands`
+		var_98 := `Brands`
+		_, err = templBuffer.WriteString(var_98)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</h1><p class=\"font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20\">")
+		if err != nil {
+			return err
+		}
+		var_99 := `Below is a summary of the places I studied`
+		_, err = templBuffer.WriteString(var_99)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</p><div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3\"><img src=\"assets/image/brand-1.png\" alt=\"Image\"><img src=\"assets/image/brand-2.png\" alt=\"Image\"><img src=\"assets/image/brand-3.png\" alt=\"Image\"><img src=\"assets/image/brand-4.png\" alt=\"Image\"><img src=\"assets/image/brand-5.png\" alt=\"Image\"><img src=\"assets/image/brand-6.png\" alt=\"Image\"></div></div></section><!--")
+		if err != nil {
+			return err
+		}
+		var_100 := `<section class="py-10 md:py-16">
+				<div class="container max-w-screen-xl mx-auto px-4">
+					<h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Testimonial</h1>
+					<p class="font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20">Below is a summary of the places I studied</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<div class="bg-gray-50 px-8 py-10 rounded-md">
+							<p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.</p>
+							<h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+						</div>
+						<div class="bg-gray-50 px-8 py-10 rounded-md">
+							<p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.</p>
+							<h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+						</div>
+						<div class="bg-gray-50 px-8 py-10 rounded-md">
+							<p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.</p>
+							<h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+						</div>
+						<div class="bg-gray-50 px-8 py-10 rounded-md">
+							<p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.</p>
+							<h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+						</div>
+						<div class="bg-gray-50 px-8 py-10 rounded-md">
+							<p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.</p>
+							<h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+						</div>
+						<div class="bg-gray-50 px-8 py-10 rounded-md">
+							<p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.</p>
+							<h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+						</div>
+					</div>
+				</div>
+			</section>`
 		_, err = templBuffer.WriteString(var_100)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h1><p class=\"font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20\">")
+		_, err = templBuffer.WriteString("--><footer class=\"py-10 md:py-16 mb-20 md:mb-40 lg::mb-52\"><div class=\"container max-w-screen-xl mx-auto px-4\"><div class=\"text-center\"><h1 class=\"font-medium text-gray-700 text-4xl md:text-5xl mb-5\">")
 		if err != nil {
 			return err
 		}
-		var_101 := `Below is a summary of the places I studied`
+		var_101 := `Testimonial`
 		_, err = templBuffer.WriteString(var_101)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3\"><img src=\"assets/image/brand-1.png\" alt=\"Image\"><img src=\"assets/image/brand-2.png\" alt=\"Image\"><img src=\"assets/image/brand-3.png\" alt=\"Image\"><img src=\"assets/image/brand-4.png\" alt=\"Image\"><img src=\"assets/image/brand-5.png\" alt=\"Image\"><img src=\"assets/image/brand-6.png\" alt=\"Image\"></div></div></section><section class=\"py-10 md:py-16\"><div class=\"container max-w-screen-xl mx-auto px-4\"><h1 class=\"font-medium text-gray-700 text-3xl md:text-4xl mb-5\">")
-		if err != nil {
-			return err
-		}
-		var_102 := `Testimonial`
-		_, err = templBuffer.WriteString(var_102)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</h1><p class=\"font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20\">")
-		if err != nil {
-			return err
-		}
-		var_103 := `Below is a summary of the places I studied`
-		_, err = templBuffer.WriteString(var_103)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"><div class=\"bg-gray-50 px-8 py-10 rounded-md\"><p class=\"font-normal text-gray-500 text-md mb-4\">")
-		if err != nil {
-			return err
-		}
-		var_104 := `Lorem ipsum dolor sit amet, consectetur `
-		_, err = templBuffer.WriteString(var_104)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_105 := `adipiscing elit, sed do eiusmod tempor `
-		_, err = templBuffer.WriteString(var_105)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_106 := `incididunt ut labore et dolore magna aliqua.`
-		_, err = templBuffer.WriteString(var_106)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><h6 class=\"font-semibold text-gray-500 text-md\">")
-		if err != nil {
-			return err
-		}
-		var_107 := `Stephan Clark `
-		_, err = templBuffer.WriteString(var_107)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-medium text-gray-300 text-sm\">")
-		if err != nil {
-			return err
-		}
-		var_108 := `- CEO at EarlyBird`
-		_, err = templBuffer.WriteString(var_108)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</span></h6></div><div class=\"bg-gray-50 px-8 py-10 rounded-md\"><p class=\"font-normal text-gray-500 text-md mb-4\">")
-		if err != nil {
-			return err
-		}
-		var_109 := `Lorem ipsum dolor sit amet, consectetur `
-		_, err = templBuffer.WriteString(var_109)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_110 := `adipiscing elit, sed do eiusmod tempor `
-		_, err = templBuffer.WriteString(var_110)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_111 := `incididunt ut labore et dolore magna aliqua.`
-		_, err = templBuffer.WriteString(var_111)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><h6 class=\"font-semibold text-gray-500 text-md\">")
-		if err != nil {
-			return err
-		}
-		var_112 := `Stephan Clark `
-		_, err = templBuffer.WriteString(var_112)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-medium text-gray-300 text-sm\">")
-		if err != nil {
-			return err
-		}
-		var_113 := `- CEO at EarlyBird`
-		_, err = templBuffer.WriteString(var_113)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</span></h6></div><div class=\"bg-gray-50 px-8 py-10 rounded-md\"><p class=\"font-normal text-gray-500 text-md mb-4\">")
-		if err != nil {
-			return err
-		}
-		var_114 := `Lorem ipsum dolor sit amet, consectetur `
-		_, err = templBuffer.WriteString(var_114)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_115 := `adipiscing elit, sed do eiusmod tempor `
-		_, err = templBuffer.WriteString(var_115)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_116 := `incididunt ut labore et dolore magna aliqua.`
-		_, err = templBuffer.WriteString(var_116)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><h6 class=\"font-semibold text-gray-500 text-md\">")
-		if err != nil {
-			return err
-		}
-		var_117 := `Stephan Clark `
-		_, err = templBuffer.WriteString(var_117)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-medium text-gray-300 text-sm\">")
-		if err != nil {
-			return err
-		}
-		var_118 := `- CEO at EarlyBird`
-		_, err = templBuffer.WriteString(var_118)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</span></h6></div><div class=\"bg-gray-50 px-8 py-10 rounded-md\"><p class=\"font-normal text-gray-500 text-md mb-4\">")
-		if err != nil {
-			return err
-		}
-		var_119 := `Lorem ipsum dolor sit amet, consectetur `
-		_, err = templBuffer.WriteString(var_119)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_120 := `adipiscing elit, sed do eiusmod tempor `
-		_, err = templBuffer.WriteString(var_120)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_121 := `incididunt ut labore et dolore magna aliqua.`
-		_, err = templBuffer.WriteString(var_121)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><h6 class=\"font-semibold text-gray-500 text-md\">")
-		if err != nil {
-			return err
-		}
-		var_122 := `Stephan Clark `
-		_, err = templBuffer.WriteString(var_122)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-medium text-gray-300 text-sm\">")
-		if err != nil {
-			return err
-		}
-		var_123 := `- CEO at EarlyBird`
-		_, err = templBuffer.WriteString(var_123)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</span></h6></div><div class=\"bg-gray-50 px-8 py-10 rounded-md\"><p class=\"font-normal text-gray-500 text-md mb-4\">")
-		if err != nil {
-			return err
-		}
-		var_124 := `Lorem ipsum dolor sit amet, consectetur `
-		_, err = templBuffer.WriteString(var_124)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_125 := `adipiscing elit, sed do eiusmod tempor `
-		_, err = templBuffer.WriteString(var_125)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_126 := `incididunt ut labore et dolore magna aliqua.`
-		_, err = templBuffer.WriteString(var_126)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><h6 class=\"font-semibold text-gray-500 text-md\">")
-		if err != nil {
-			return err
-		}
-		var_127 := `Stephan Clark `
-		_, err = templBuffer.WriteString(var_127)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-medium text-gray-300 text-sm\">")
-		if err != nil {
-			return err
-		}
-		var_128 := `- CEO at EarlyBird`
-		_, err = templBuffer.WriteString(var_128)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</span></h6></div><div class=\"bg-gray-50 px-8 py-10 rounded-md\"><p class=\"font-normal text-gray-500 text-md mb-4\">")
-		if err != nil {
-			return err
-		}
-		var_129 := `Lorem ipsum dolor sit amet, consectetur `
-		_, err = templBuffer.WriteString(var_129)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_130 := `adipiscing elit, sed do eiusmod tempor `
-		_, err = templBuffer.WriteString(var_130)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_131 := `incididunt ut labore et dolore magna aliqua.`
-		_, err = templBuffer.WriteString(var_131)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</p><h6 class=\"font-semibold text-gray-500 text-md\">")
-		if err != nil {
-			return err
-		}
-		var_132 := `Stephan Clark `
-		_, err = templBuffer.WriteString(var_132)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<span class=\"font-medium text-gray-300 text-sm\">")
-		if err != nil {
-			return err
-		}
-		var_133 := `- CEO at EarlyBird`
-		_, err = templBuffer.WriteString(var_133)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</span></h6></div></div></div></section><footer class=\"py-10 md:py-16 mb-20 md:mb-40 lg::mb-52\"><div class=\"container max-w-screen-xl mx-auto px-4\"><div class=\"text-center\"><h1 class=\"font-medium text-gray-700 text-4xl md:text-5xl mb-5\">")
-		if err != nil {
-			return err
-		}
-		var_134 := `Testimonial`
-		_, err = templBuffer.WriteString(var_134)
 		if err != nil {
 			return err
 		}
@@ -1223,17 +957,8 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_135 := `I’m not currently taking on new client work but feel free to contact me for any `
-		_, err = templBuffer.WriteString(var_135)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<br> ")
-		if err != nil {
-			return err
-		}
-		var_136 := `other inquiries.`
-		_, err = templBuffer.WriteString(var_136)
+		var_102 := `Open to remote (GMT+13) and hybrid opportunities.`
+		_, err = templBuffer.WriteString(var_102)
 		if err != nil {
 			return err
 		}
@@ -1241,10 +966,10 @@ func debug() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_137 := `
+		var_103 := `
             feather.replace()
         `
-		_, err = templBuffer.WriteString(var_137)
+		_, err = templBuffer.WriteString(var_103)
 		if err != nil {
 			return err
 		}
