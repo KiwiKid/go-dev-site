@@ -43,8 +43,8 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		var var_3 string = "{ A software developer, fpv drone pilot, self-hosted software enthusiast - based in Christchurch, New Zealand (GMT+13) }"
-		_, err = templBuffer.WriteString(templ.EscapeString(var_3))
+		var_3 := `A software developer, fpv drone pilot, self-hosted software enthusiast - based in Christchurch, New Zealand (GMT+13 )`
+		_, err = templBuffer.WriteString(var_3)
 		if err != nil {
 			return err
 		}
@@ -75,7 +75,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"#waterreporter\"><img src=\"/assets/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
+		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"https://chch-water-reporter.vercel.app/\" target=\"_blank\"><img src=\"/assets/covid19/icon-512x512.png\" alt=\"Chch Water Reporter\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
@@ -84,11 +84,11 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"#gogethabits\"><img src=\"/assets/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
+		_, err = templBuffer.WriteString("</h3></a><a class=\"block p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out\" href=\"https://label-maker-3000.fly.dev\" target=\"_blank\"><img src=\"/assets/covid19/icon-512x512.png\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"><h3 class=\"mt-2 text-center text-xl font-medium\">")
 		if err != nil {
 			return err
 		}
-		var_8 := `go-get-habits`
+		var_8 := `Label-Maker-3000 (wip)`
 		_, err = templBuffer.WriteString(var_8)
 		if err != nil {
 			return err
@@ -106,15 +106,6 @@ func home() templ.Component {
 			return err
 		}
 		err = chchWaterReporter().Render(ctx, templBuffer)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString(" ")
-		if err != nil {
-			return err
-		}
-		var_9 := `Habits()`
-		_, err = templBuffer.WriteString(var_9)
 		if err != nil {
 			return err
 		}

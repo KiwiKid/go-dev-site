@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"context"
 	"log"
-	"net/http"
-
-	"github.com/a-h/templ"
+	"os"
 )
 
 /*
@@ -24,7 +22,26 @@ func setMIMEType(next http.Handler) http.Handler {
 
 func main() {
 
-	component := home()
+	outputDir := "./output"
+
+	if _, err := os.Stat(outputDir); os.IsNotExist(err) {
+		err := os.MkdirAll(outputDir, 0755) // 0755 is a common permission setting (read and execute access for everyone, full access for the owner)
+		if err != nil {
+			log.Fatalf("failed to create output directory: %v", err)
+		}
+	}
+
+	f, err := os.Create(outputDir + "/home.html")
+	if err != nil {
+		log.Fatalf("failed to create output file: %v", err)
+	}
+
+	err = home().Render(context.Background(), f)
+	if err != nil {
+		log.Fatalf("failed to write output file: %v", err)
+	}
+
+	/*component :=
 
 	http.Handle("/", templ.Handler(component))
 
@@ -48,5 +65,5 @@ func main() {
 	fmt.Println("Listening on :3000")
 	if err := http.ListenAndServe(":3000", nil); err != nil {
 		log.Printf("error listening: %v", err)
-	}
+	}*/
 }
