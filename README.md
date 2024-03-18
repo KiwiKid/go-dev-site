@@ -1,4 +1,7 @@
+# !!! (deprecated) Moved to github.com/KiwiKid/KiwiKid
 ```bash
+
+
 templ generate
 
 # (css rebuild)
